@@ -1,5 +1,6 @@
 
-# 객체와 메소드
+# JS 클래스
+## 객체와 메소드
 - 객체 속에 있는 함수는 메소드, 프로퍼티는 멤버라고 함
 ```javascript
 const person = {
@@ -13,8 +14,8 @@ person.greet(); // Hello, my name is juri
 
 ## 생성자 함수
 
-- 객체를 만드는 함수. 
-- 생성자 함수는 첫 글자를 대문자로 시작 (파스칼 표기법)
+- 객체를 만드는 함수
+- 생성자 함수는 첫 글자를 대문자로 시작(파스칼 표기법)
 
 ```javascript
 function User(first, last) {
@@ -24,7 +25,7 @@ function User(first, last) {
 const user1 = new User('juri', 'lee');
 console.log(user1); // User { firstName: 'juri', lastName: 'lee' }
 ```
-### 인스턴스
+## 인스턴스
 - 생성자 함수를 통해 만들어진 객체를 인스턴스라고 함
 ```javascript
 User.prototype.getFullName = function () {
@@ -33,7 +34,7 @@ User.prototype.getFullName = function () {
 const user2 = new User('amy', 'clarke');
 console.log(user2.getFullName()); // amy clarke
 ```
-### 프로토타입
+## 프로토타입
 - 객체는 프로토타입을 통해 상속받을 수 있음
 - 프로토타입 체인으로 객체가 가지고 있지 않은 메소드를 찾아올 수 있음
 
@@ -45,8 +46,8 @@ const fruits = ['apple', 'banana', 'orange'];
 console.log(fruits.includes('banana')); // true
 ```
 
-### this 키워드
-- 일반 함수는 호출 위치에 따라 this가 결정되지만, 화살표 함수는 자신이 선언된 곳의 this를 사용
+## this 키워드
+- 일반 함수는 호출 위치에 따라 this가 결정되지만 **화살표 함수는 자신이 선언된 곳**의 this를 사용
 
 ```javascript
 const juri = {
@@ -82,8 +83,9 @@ const timer = {
 };
 timer.timeout(); // juri!!
 ```
-### class
--  ES6에서 제공되는 문법. 생성자 함수를 대체하는 방식
+## class
+- ES6에서 제공되는 문법
+- 생성자 함수를 대체하는 방식
 ```javascript
 class UserClass {
   constructor(first, last) {
@@ -97,7 +99,7 @@ class UserClass {
 const juriClass = new UserClass('juri', 'lee');
 console.log(juriClass.getFullName()); // juri lee
 ```
-### 상속(확장)
+## 상속(확장)
 ```javascript
 class Vehicle {
   constructor(name, wheel) {
@@ -122,5 +124,5 @@ class Car extends Vehicle {
 const myCar = new Car('벤츠', 4, true);
 console.log(myCar); // Car { name: '벤츠', wheel: 4, license: true }
 ```
-- `extends` 키워드를 사용해 부모 클래스를 확장할 수 있음.
+- `extends` 키워드를 사용해 부모 클래스를 확장할 수 있음
 - `super`를 호출해 부모 클래스의 생성자를 실행해야 함
