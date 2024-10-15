@@ -3,17 +3,18 @@
 ## 내보내기와 불러오기
 - **내보내기**
   - `export default function () {}`  
-  - `default`는 이름 없이 내보낼 수 있으며, 파일에 하나만 존재 가능
+    - `default`는 이름 없이 내보낼 수 있으며, 파일에 하나만 존재 가능
   - `export function Named () {}`, `export const something = {}`  
-  - `default` 없이 사용된 경우(예: `Named`)에는 이름을 지정해서 내보내기
+    - `default` 없이 사용된 경우(예: `Named`)에는 이름을 지정해서 내보내기
 
 - **불러오기**
   - `import keyword from 'modules'`  
-  - 내가 지정한 `keyword`로 모듈을 불러와 사용
-  - `import {}` from 'modules'  
-  - 중괄호는 이름을 지정해야 할 때 사용하며, 구조 분해 방식으로 가져올 수 있음
+    - 내가 지정한 `keyword`로 모듈을 불러와 사용
+  - `import {} from 'modules'  `
+    - 중괄호는 이름을 지정해야 할 때 사용하며, 구조 분해 방식으로 가져올 수 있음
   - `import { Named, Named2 as keyword } from 'modules'`
-  - `import * as R from 'getRandom'` // 와일드카드로 모든 모듈을 한 번에 가져옴
+  - `import * as R from 'getRandom'` 
+    - 와일드카드로 모든 모듈을 한 번에 가져옴
 
 ## Lodash 활용법
 - https://lodash.com/docs/4.17.15
@@ -38,8 +39,7 @@
 ## JSON
 - 자바스크립트 데이터를 표현하는 개방형 표준 포맷. `key-value` 쌍으로 구성
 - 비동기 통신에서 자주 사용되며, XML을 대체하는 주요 데이터 포맷(예: package.json)
-- 큰따옴표("")만 사용 가능하며, undefined 제외 모든 데이터 타입 허용.
-
+- 큰따옴표("")만 사용 가능하며, undefined 제외 모든 데이터 타입 허용
 
 ```javascript
 {
@@ -67,10 +67,10 @@ console.log(obj); // {name: "juri", age: 95, email: "juri.lee.dev@gmail.com"}
 - 브라우저에서 관리되는 일종의 데이터 저장소
 
 **localStorage**
-- 데이터가 만료되지 않음.
+- 데이터가 만료되지 않음
 
 **SessionStorage**
--  페이지를 닫으면 데이터가 사라짐.
+-  페이지를 닫으면 데이터가 사라짐
 
 ```javascript
 localStorage.setItem('key', JSON.stringify({ name: 'juri' })); // 로컬 스토리지에 데이터 저장
@@ -92,7 +92,7 @@ localStorage.clear(); // 로컬 스토리지의 모든 값 삭제
 
 ### Axios
 - https://github.com/axios/axios
-- Node.js와 브라우저 환경에서 HTTP 통신을 쉽게 할 수 있도록 도와주는 패키지.
+- Node.js와 브라우저 환경에서 HTTP 통신을 쉽게 할 수 있도록 도와주는 패키지
 
 ```javascript
 import axios from 'axios';
