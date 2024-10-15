@@ -3,5 +3,8 @@ $color--white: #fff;
 
 body{
     background: $color--black;
-    h1{color:$color--white}
+    h1{
+        color:$color--white;
+        display:flex
+    }
 }
