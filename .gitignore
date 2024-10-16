@@ -1,3 +1,4 @@
 node_modules
 /dist
 .cache
+.git_commit_template
