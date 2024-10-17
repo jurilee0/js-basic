@@ -1,0 +1,9 @@
+$color--black:#000;
+$color--white:#fff;
+body{
+    background: blanchedalmond;
+    h1{
+        color: $color--white;
+        display: flex;
+    }
+}
